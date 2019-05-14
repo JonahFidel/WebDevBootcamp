@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Circles</title>
+	<script type="text/javascript" src="paper-full.js"></script>
+	<link rel="stylesheet" type="text/css" href="circles.css">
+
+	<script type="text/paperscript" canvas="myCanvas">
+		for (var j = 0; j < 15; j++){
+			for (var i = 0; i < 15; i++){
+				var myCircle = new Path.Circle(new Point(i * 100 * Math.random(), j * 100 * Math.random()), 10);
+				console.log(Math.random());
+				myCircle.fillColor = {
+					gradient: {
+				        stops: [['yellow', 0.05], ['red', 0.2], ['black', 1]],
+				        radial: true
+				    },
+				    origin: myCircle.position,
+    				destination: myCircle.bounds.rightCenter
+			    };
+			}
+		}
+	</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+</body>
+</html>
