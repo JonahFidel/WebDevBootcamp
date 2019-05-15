@@ -3,21 +3,23 @@ bodyParser = require('body-parser')
 mongoose   = require('mongoose'),
 app        = express();
 
-mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose.connect("mongodb://localhost:27017/yelp_camp_v2", {useNewUrlParser: true});
 
 app.use(bodyParser.urlencoded({extended: true}));
 
 // SCHEMA SETUP
 var campgroundSchema = new mongoose.Schema({
 	name: String,
-	image :String
+	image :String,
+	description: String
 });
 
 var Campground = mongoose.model("Campground", campgroundSchema);
 
 // Campground.create({
 // 			name: "Salmon Creek", 
-// 			image: "https://media-cdn.tripadvisor.com/media/photo-s/08/99/c4/84/10-shady-lovely-campsites.jpg"
+// 			image: "https://media-cdn.tripadvisor.com/media/photo-s/08/99/c4/84/10-shady-lovely-campsites.jpg", 
+// 			description: "This is a creek with lots of salmon, no bathrooms. SALMON EVERYWHERE"
 // 		}, function(err, campground){
 // 			if (err) {
 // 				console.log(err);
@@ -49,6 +51,7 @@ app.get('/', function(req, res){
 	res.render("landing");
 });
 
+//INDEX - show all campgrounds
 app.get('/campgrounds', function(req, res){
 	// res.render("campgrounds", {campgrounds: campgrounds});
 
@@ -57,16 +60,18 @@ app.get('/campgrounds', function(req, res){
 		if (err){
 			console.log(err);
 		} else {
-			res.render("campgrounds", {campgrounds: allCampgrounds});
+			res.render("index", {campgrounds: allCampgrounds});
 		}
 	});
 });
 
+//CREATE - add new campground to database
 app.post('/campgrounds', function(req, res){
 	// get data from form 
 	var name = req.body.name;
 	var image = req.body.image;
-	var newCampground = {name:name, image:image};
+	var desc = req.body.description;
+	var newCampground = {name:name, image:image, description: desc};
 	// create a new campground and save to db
 	Campground.create(newCampground, function(err, newlyCreated){
 		if(err){
@@ -78,8 +83,23 @@ app.post('/campgrounds', function(req, res){
 	});
 });
 
+//NEW - Show form to add new campground
 app.get('/campgrounds/new', function(req, res){
 	res.render("new");
+});
+
+//SHOW - show additional info about a campground that user clicked on 
+app.get('/campgrounds/:id', function(req, res){
+	Campground.findById(req.params.id, function(err, foundCampground){
+		if(err){
+			console.log(err);
+		} else {
+			res.render("show", {campground: foundCampground})
+		}
+	});
+
+	//find the campground with provided ID 
+	//something
 });
 
 // alternate port setup for hosted
