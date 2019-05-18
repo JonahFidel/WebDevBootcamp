@@ -1,0 +1,102 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'apt-get' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.2
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData apt-get
+8 silly fetchNamedPackageData apt-get
+9 silly mapToRegistry name apt-get
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'apt-get',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'apt-get',
+12 silly mapToRegistry   name: 'apt-get',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/apt-get
+14 verbose request uri https://registry.npmjs.org/apt-get
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 3:54:30 PM
+17 verbose request id 8e3022d8c8334ecc
+18 http request GET https://registry.npmjs.org/apt-get
+19 http 200 https://registry.npmjs.org/apt-get
+20 verbose headers { date: 'Tue, 14 May 2019 19:54:30 GMT',
+20 verbose headers   'content-type': 'application/json; charset=UTF-8',
+20 verbose headers   'transfer-encoding': 'chunked',
+20 verbose headers   connection: 'keep-alive',
+20 verbose headers   'set-cookie': [ '__cfduid=dc6128c630524b2769fe2158278e504491557863670; expires=Wed, 13-May-20 19:54:30 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+20 verbose headers   'cf-cache-status': 'REVALIDATED',
+20 verbose headers   'cache-control': 'max-age=300',
+20 verbose headers   'cf-ray': '4d6f6ca3b8e3ae12-BOS',
+20 verbose headers   etag: 'W/"e61ef99383d2ff54aae4dca438884b76"',
+20 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+20 verbose headers   'last-modified': 'Sat, 26 May 2018 17:14:57 GMT',
+20 verbose headers   vary: 'accept-encoding, accept',
+20 verbose headers   server: 'cloudflare',
+20 verbose headers   'content-encoding': 'gzip' }
+21 silly get cb [ 200,
+21 silly get   { date: 'Tue, 14 May 2019 19:54:30 GMT',
+21 silly get     'content-type': 'application/json; charset=UTF-8',
+21 silly get     'transfer-encoding': 'chunked',
+21 silly get     connection: 'keep-alive',
+21 silly get     'set-cookie': [ '__cfduid=dc6128c630524b2769fe2158278e504491557863670; expires=Wed, 13-May-20 19:54:30 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+21 silly get     'cf-cache-status': 'REVALIDATED',
+21 silly get     'cache-control': 'max-age=300',
+21 silly get     'cf-ray': '4d6f6ca3b8e3ae12-BOS',
+21 silly get     etag: 'W/"e61ef99383d2ff54aae4dca438884b76"',
+21 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+21 silly get     'last-modified': 'Sat, 26 May 2018 17:14:57 GMT',
+21 silly get     vary: 'accept-encoding, accept',
+21 silly get     server: 'cloudflare',
+21 silly get     'content-encoding': 'gzip' } ]
+22 verbose get saving apt-get to /Users/jonahfidel/.npm/registry.npmjs.org/apt-get/.cache.json
+23 verbose correctMkdir /Users/jonahfidel/.npm correctMkdir not in flight; initializing
+24 silly install normalizeTree
+25 silly loadCurrentTree Finishing
+26 silly loadIdealTree Starting
+27 silly install loadIdealTree
+28 silly cloneCurrentTree Starting
+29 silly install cloneCurrentTreeToIdealTree
+30 silly cloneCurrentTree Finishing
+31 silly loadShrinkwrap Starting
+32 silly install loadShrinkwrap
+33 silly loadShrinkwrap Finishing
+34 silly loadAllDepsIntoIdealTree Starting
+35 silly install loadAllDepsIntoIdealTree
+36 silly rollbackFailedOptional Starting
+37 silly rollbackFailedOptional Finishing
+38 silly runTopLevelLifecycles Finishing
+39 silly install printInstalled
+40 verbose stack Error: Unsupported platform for apt-get@0.1.0: wanted {"name":"apt-get","version":"0.1.0","private":false,"homepage":"https://github.com/Holusion/node-apt-get","keywords":["apt","apt-get","update","upgrade","debian","ubuntu"],"author":{"name":"Sebastien Dumetz","email":"s.dumetz@holusion.com","url":"https://github.com/klepthys"},"contributors":[{"name":"Maxime Chaveroche"},{"name":"Kenza Khamaily"}],"scripts":{"start":"NODE_ENV=development ./node_modules/.bin/supervisor app.js","test":"mocha --reporter spec"},"main":"index.js","os":["linux"],"devDependencies":{"mocha":"*","chai":"*","rewire":"*"},"description":"","_id":"apt-get@0.1.0","dist":{"shasum":"6bea420038faca0365097b4eaef0c06b327991ca","tarball":"https://registry.npmjs.org/apt-get/-/apt-get-0.1.0.tgz"},"_from":"apt-get","_npmVersion":"1.4.3","_npmUser":{"name":"klepthys","email":"s.dumetz@holusion.com"},"maintainers":[{"name":"klepthys","email":"s.dumetz@holusion.com"}],"directories":{},"_resolved":"https://registry.npmjs.org/apt-get/-/apt-get-0.1.0.tgz","_shasum":"6bea420038faca0365097b4eaef0c06b327991ca","_requested":{"raw":"apt-get","scope":null,"escapedName":"apt-get","name":"apt-get","rawSpec":"","spec":"latest","type":"tag"},"_spec":"apt-get","_where":"/Users/jonahfidel/dev/Web Dev Bootcamp/YelpCamp","_args":[[{"raw":"apt-get","scope":null,"escapedName":"apt-get","name":"apt-get","rawSpec":"","spec":"latest","type":"tag"},"/Users/jonahfidel/dev/Web Dev Bootcamp/YelpCamp"]],"readme":"ERROR: No README data found!"} (current: {"os":"darwin","cpu":"x64"})
+40 verbose stack     at checkPlatform (/usr/local/lib/node_modules/npm/node_modules/npm-install-checks/index.js:45:14)
+40 verbose stack     at thenWarnEngineIssues (/usr/local/lib/node_modules/npm/lib/install/validate-args.js:41:5)
+40 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+40 verbose stack     at checkEngine (/usr/local/lib/node_modules/npm/node_modules/npm-install-checks/index.js:10:20)
+40 verbose stack     at module.exports.isInstallable (/usr/local/lib/node_modules/npm/lib/install/validate-args.js:38:3)
+40 verbose stack     at Array.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+40 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+40 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:18:7
+40 verbose stack     at checkSelf (/usr/local/lib/node_modules/npm/lib/install/validate-args.js:46:72)
+40 verbose stack     at Array.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+41 verbose pkgid apt-get@0.1.0
+42 verbose cwd /Users/jonahfidel/dev/Web Dev Bootcamp/YelpCamp
+43 error Darwin 17.7.0
+44 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "apt-get"
+45 error node v6.11.2
+46 error npm  v3.10.10
+47 error code EBADPLATFORM
+48 error notsup Unsupported platform for apt-get@0.1.0: wanted {"os":"linux","arch":"any"} (current: {"os":"darwin","arch":"x64"})
+49 error notsup Valid OS:    linux
+49 error notsup Valid Arch:  any
+49 error notsup Actual OS:   darwin
+49 error notsup Actual Arch: x64
+50 verbose exit [ 1, true ]
