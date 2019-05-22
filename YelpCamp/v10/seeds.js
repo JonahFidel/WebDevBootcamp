@@ -49,7 +49,7 @@ function seedDB(){
 					Comment.create({
 						text: "This place is great but I wish there was internet",
 						author: {
-							id: "588c2e092403d111454fff71",
+							id: "5ce588edfda1b311d26c1783",
 							username: "Jack"
 						}
 					}, 
@@ -66,6 +66,14 @@ function seedDB(){
 			});
 		});
 	});
+	// // Remove all campgrounds
+	// User.deleteMany({}, function(err){
+	// 	if(err){
+	// 		console.log(err);
+	// 	} else {
+
+	// 	}			
+	// });
 }
 
 module.exports = seedDB;
